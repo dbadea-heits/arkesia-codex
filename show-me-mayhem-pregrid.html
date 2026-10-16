@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mayhem Berserker · pre-Ark-Grid skill code</title>
+<style>
+:root{--bg:#0d0f14;--panel:#161a22;--line:#2a303c;--gold:#d4b06a;--red:#c8423a;--txt:#e8e4da;--mut:#9aa1ad}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(1200px 500px at 10% -10%,#2a1414 0,transparent 60%),var(--bg);color:var(--txt);font:15px/1.5 -apple-system,"Apple SD Gothic Neo","Segoe UI",sans-serif}
+main{max-width:980px;margin:0 auto;padding:28px 18px 60px;display:grid;gap:18px}
+header h1{margin:0;font-size:26px;letter-spacing:.2px}header h1 em{color:var(--red);font-style:normal}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.tags span{border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--mut);font-size:13px}
+main>*,.grid>*{min-width:0}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h2{margin:0 0 10px;font-size:15px;text-transform:uppercase;letter-spacing:1.2px;color:var(--gold)}
+.pick{border-color:#6b5530;box-shadow:0 0 0 1px #3a2f1a inset}
+.code{display:flex;gap:10px;align-items:stretch}
+.code code{flex:1;font:13px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all;background:#0a0c10;border:1px solid var(--line);border-radius:10px;padding:12px;color:#f3e3bd}
+button{min-width:84px;border:1px solid #6b5530;background:#2a2317;color:var(--gold);border-radius:10px;font-weight:600;cursor:pointer;padding:0 14px}button:hover{background:#3a2f1a}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:10px;color:var(--mut);font-size:13px}.meta a{color:var(--gold)}
+.meter{display:inline-flex;align-items:center;gap:8px}.bar{width:120px;height:8px;border-radius:9px;background:#262b35;overflow:hidden}.bar b{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--gold))}
+.tbl{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:620px}th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:middle}th{color:var(--mut);font-weight:500;font-size:12px;text-transform:uppercase;letter-spacing:.8px}
+td span{display:block;color:var(--mut);font-size:12px}.tp i{display:inline-grid;place-items:center;width:24px;height:24px;margin-right:3px;border-radius:6px;background:#232834;border:1px solid var(--line);font-style:normal;font-weight:700;color:var(--gold)}
+.foot{color:var(--mut);font-size:12px;margin-top:10px}
+ol.rot{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}ol.rot li{background:#231718;border:1px solid #5a2622;border-radius:9px;padding:6px 11px;font-weight:600}ol.rot li:first-child{background:#5a1f1b;border-color:var(--red)}ol.rot li+li::before{content:"→";color:var(--mut);margin:0 8px 0 -4px;font-weight:400}ol.rot small{color:var(--mut);font-weight:400}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:720px){.grid{grid-template-columns:1fr}.code{flex-direction:column}button{min-height:40px}}
+dl{margin:0;display:grid;grid-template-columns:max-content 1fr;gap:6px 14px}dt{color:var(--mut)}dd{margin:0}
+.warn{border-color:#5a2622;background:#1a1213}.warn li{margin:4px 0}ul{margin:0;padding-left:18px}
+</style></head><body><main>
+<header><h1>Berserker · <em>Mayhem</em> (광기) — pre-Ark-Grid code</h1>
+<div class="tags"><span>party raid</span><span>no Ark Grid cores</span><span>KR source</span><span>Sword Storm + Power Break set</span></div></header>
+
+<section class="card pick"><h2>Jev pick — “1. 코어 이전”</h2>
+<div class="code"><code id="codeA">33A6375A1358476BE4B12B8B0CC21892AD8AA98FBC2B45DDBAEAE080C9509B97093A97C936FCDD8AC0D1F5DB05EC73965B4AC72D112FC4F11CEA1324772EA392</code><button data-copy="codeA">Copy</button></div>
+<div class="meta"><a href="https://www.inven.co.kr/board/lostark/5341/152385">inven 5341/152385</a><span>posted 2025-12-13</span>
+<span class="meter">Jev pick <span class="bar"><b style="width:63%"></b></span> 0.63</span><span>fits brief 0.94</span></div></section>
+
+<section class="card"><h2>What the code sets</h2><div class="tbl"><table>
+<thead><tr><th>Skill</th><th>Lv</th><th>Tripods (T1 T2 T3)</th><th>Gems</th><th>Rune</th></tr></thead><tbody>
+<tr><td><b>레드 더스트</b><span>Red Dust</span></td><td>11</td><td class='tp'><i>1</i> <i>1</i> <i>1</i></td><td>작</td><td>출혈 Bleed</td></tr>
+<tr><td><b>마운틴 크래쉬</b><span>Mountain Crash</span></td><td>14</td><td class='tp'><i>1</i> <i>1</i> <i>1</i></td><td>겁</td><td>전설 속행 Quick Recharge</td></tr>
+<tr><td><b>피니시 스트라이크</b><span>Finish Strike</span></td><td>14</td><td class='tp'><i>2</i> <i>3</i> <i>2</i></td><td>겁 · 작</td><td>전설 질풍 Galewind</td></tr>
+<tr><td><b>오버드라이브</b><span>Overdrive</span></td><td>14</td><td class='tp'><i>1</i> <i>3</i> <i>2</i></td><td>겁 · 작</td><td>출혈 Bleed</td></tr>
+<tr><td><b>헬 블레이드</b><span>Hell Blade</span></td><td>14</td><td class='tp'><i>2</i> <i>3</i> <i>2</i></td><td>겁 · 작</td><td>전설 질풍 Galewind</td></tr>
+<tr><td><b>소드 스톰</b><span>Sword Storm</span></td><td>14</td><td class='tp'><i>2</i> <i>2</i> <i>1</i></td><td>겁 · 작</td><td>전설 집중 Focus</td></tr>
+<tr><td><b>파워 브레이크</b><span>Power Break</span></td><td>14</td><td class='tp'><i>3</i> <i>3</i> <i>2</i></td><td>겁</td><td>영웅 질풍 Galewind</td></tr>
+<tr><td><b>숄더 차지</b><span>Shoulder Charge</span></td><td>1</td><td class='tp'>—</td><td>—</td><td>속행 Quick Recharge</td></tr>
+<tr><td><b>블러드 슬래시</b><span>Blood Slash · hyper awakening skill</span></td><td></td><td>—</td><td>—</td><td>—</td></tr>
+</tbody></table></div>
+<p class="foot">Tripod digits = option slot per tier, as the author wrote them. 겁 = damage gem (겁화), 작 = cooldown gem (작열).</p></section>
+
+<section class="card"><h2>Rotation — pack it inside Red Dust</h2><ol class="rot"><li>레더</li><li>블슬 <small>if up</small></li><li>옵드</li><li>피니시</li><li>헬블</li><li>소스</li><li>파브</li><li>마운틴 ×2</li></ol>
+<p class="foot">Dark Rush (다크 러쉬): only for push immunity or stagger checks, not in the damage loop. Since the 26.02.11 KR patch every skill cast extends 격노 by 1.5 s, so the window is less strict.</p></section>
+
+<div class="grid">
+<section class="card"><h2>Engravings</h2><dl>
+<dt>1</dt><dd>원한 Grudge</dd><dt>2</dt><dd>예둔 Keen Blunt Weapon <span style="color:var(--mut)">→ 질증 Mass Increase if you have an atk-speed bracelet</span></dd>
+<dt>3</dt><dd>돌대 Raid Captain</dd><dt>4</dt><dd>저받 Cursed Doll</dd><dt>5</dt><dd>달저 Master’s Tenacity</dd></dl></section>
+<section class="card"><h2>Stats & Ark Passive</h2><dl>
+<dt>Split</dt><dd>Crit / Swiftness (치신 bracelet)</dd><dt>Pet</dt><dd>Swiftness</dd>
+<dt>Crit</dt><dd>~60% in town; Burst Mode adds +30%</dd></dl></section>
+</div>
+
+<section class="card"><h2>Runner-up — 루현 음돌 intro guide (Jev 0.32)</h2>
+<div class="code"><code id="codeB">FE2A2EBAA4DC1D32226D12E370DA5368072BC99333E811B8B7F96F125E055556C0DD6D9CAA55D693774B4062D10594669C5F8B79173D117CC64C717506FC302C</code><button data-copy="codeB">Copy</button></div>
+<div class="meta"><a href="https://www.inven.co.kr/board/lostark/5341/149511">inven 5341/149511</a><span>posted 2025-06-24</span><span>fits brief 0.84</span></div>
+<p class="foot">Same skill set from a guide creator, built for Sonic Breakthrough (음돌) with crit 80 / swift 80. Posted before the 25.12 patch, so after importing, re-pick the 회심 + 분쇄 Evolution nodes (루현, Dec 2025).</p></section>
+
+<section class="card warn"><h2>Before you import</h2><ul>
+<li>Both codes are KR codes. Importing them on global is untested unless global has KR’s current Berserker balance patch.</li>
+<li>No pre-grid Mayhem code posted after the 26.02.11 (격노 change) or 26.07.24 (+4% damage) KR patches turned up, so check tripods in the skill window after importing.</li>
+</ul></section>
+</main>
+<script>document.querySelectorAll('button[data-copy]').forEach(b=>b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent.trim());b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1200)})</script>
+</body></html>

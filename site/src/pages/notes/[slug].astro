@@ -1,0 +1,110 @@
+---
+import type { GetStaticPaths } from 'astro';
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { docTitle } from '../../lib/library';
+import { homeHref } from '../../lib/routes.mjs';
+
+export const getStaticPaths = (async () =>
+	(await getCollection('notes')).map((doc) => ({ params: { slug: doc.id }, props: { doc } }))) satisfies GetStaticPaths;
+
+const { doc } = Astro.props;
+const { Content, headings } = await render(doc);
+const toc = headings.filter((h) => h.depth <= 2);
+const file = doc.filePath?.split('/').pop();
+---
+
+<Base title={docTitle(doc)}>
+	<div class="guide">
+		<aside class="toc frame">
+			<a class="back" href={homeHref}>← All notes</a>
+			<details open id="toc">
+				<summary>On this page</summary>
+				<ol>
+					{
+						toc.map((h) => (
+							<li class={`depth-${h.depth}`}>
+								<a href={`#${h.slug}`}>{h.text}</a>
+							</li>
+						))
+					}
+				</ol>
+			</details>
+		</aside>
+		<article class="prose frame" data-file={file}>
+			<Content />
+		</article>
+	</div>
+</Base>
+
+<script>
+	// On narrow screens the contents list sits above the article; start it collapsed.
+	if (matchMedia('(max-width: 900px)').matches) document.querySelector<HTMLDetailsElement>('#toc')!.open = false;
+
+	// Wrap every code block in a titled frame with a copy button; 128-hex blocks are skill-tree codes.
+	const SKILL_CODE = /^[0-9A-F]{128}$/i;
+
+	for (const pre of document.querySelectorAll<HTMLPreElement>('.prose pre')) {
+		const text = pre.innerText.trim();
+		const block = document.createElement('div');
+		block.className = 'code-block';
+		const bar = document.createElement('div');
+		bar.className = 'code-bar';
+		const label = document.createElement('span');
+		const button = document.createElement('button');
+		button.type = 'button';
+		button.className = 'copy-btn';
+		button.textContent = 'Copy';
+
+		if (SKILL_CODE.test(text)) {
+			block.classList.add('skill-code');
+			label.textContent = 'Skill code';
+		}
+
+		button.addEventListener('click', async () => {
+			await navigator.clipboard.writeText(text);
+			button.textContent = 'Copied';
+			button.dataset.copied = '';
+			setTimeout(() => {
+				button.textContent = 'Copy';
+				delete button.dataset.copied;
+			}, 1500);
+		});
+
+		bar.append(label, button);
+		pre.replaceWith(block);
+		block.append(bar, pre);
+	}
+</script>
+
+<script>
+	import { TASK_TOGGLE_ROUTE } from '../../lib/routes.mjs';
+
+	// Dev server only: ticking a task writes `[x]` / `[ ]` back to the note's Markdown line.
+	// The write makes the dev server reload the page, which can abort the request after it succeeded.
+	if (import.meta.env.DEV) {
+		const file = document.querySelector<HTMLElement>('.prose')?.dataset.file;
+		let reloading = false;
+		addEventListener('beforeunload', () => (reloading = true));
+
+		for (const box of document.querySelectorAll<HTMLInputElement>('.prose li[data-line] > input[type="checkbox"]')) {
+			const line = Number(box.closest('li')!.dataset.line);
+			box.disabled = false;
+			box.addEventListener('change', async () => {
+				const checked = box.checked;
+				box.disabled = true;
+				const res = await fetch(TASK_TOGGLE_ROUTE, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ file, line, checked }),
+				}).catch((error: Error) => new Response(error.message, { status: 503 }));
+				if (reloading) return;
+				box.disabled = false;
+				if (!res.ok) {
+					box.checked = !checked;
+					alert(`Could not save: ${await res.text()}`);
+				}
+			});
+		}
+	}
+</script>

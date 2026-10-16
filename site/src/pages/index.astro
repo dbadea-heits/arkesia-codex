@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import { getLibrary } from '../lib/library';
+
+const library = await getLibrary();
+---
+
+<Base>
+	<section class="hero">
+		<h1>Arkesia Codex</h1>
+		<p>Roster plan, gold and honing math, class builds with skill codes, and raid guides — all in one place.</p>
+		<div class="ornament" aria-hidden="true"><span></span></div>
+	</section>
+
+	<main class="library">
+		{
+			library.map((section) => (
+				<section id={section.id} class={`grade-${section.grade}`}>
+					<div class="section-head">
+						<h2>{section.title}</h2>
+						<p>{section.blurb}</p>
+					</div>
+					<div class="cards">
+						{section.items.map((item) => (
+							<a class="card frame" href={item.href}>
+								<span class="card-icon">
+									{item.icon ? <Image src={item.icon} alt="" width={44} height={44} /> : <span class="glyph" />}
+								</span>
+								<span class="card-text">
+									<span class="card-label">{item.label}</span>
+									<span class="card-title">{item.title}</span>
+								</span>
+							</a>
+						))}
+					</div>
+				</section>
+			))
+		}
+	</main>
+</Base>
