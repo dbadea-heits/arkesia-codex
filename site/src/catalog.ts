@@ -45,6 +45,7 @@ export const sections: Section[] = [
 			{ slug: 'compare-striker', label: 'Striker', icon: 'battlemastermale/call-of-the-wind-god.png' },
 			{ slug: 'scouter', label: 'Machinist', icon: 'scouter/command-carpet.png' },
 			{ slug: 'slayer', label: 'Predator Slayer', icon: 'berserkerfemale/guillotine.png' },
+			{ slug: 'wardancer', label: 'First Intention Wardancer', icon: 'battlemaster/sweeping-kick.png' },
 			{ slug: 'gk', label: 'Guardian Knight', icon: 'guardianknight/quake-smash.png' },
 		],
 	},
