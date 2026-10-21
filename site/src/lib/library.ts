@@ -2,6 +2,7 @@ import type { ImageMetadata } from 'astro';
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { extrasSection, moreSection, sections, type Section } from '../catalog';
 import { extraHref, noteHref } from './routes.mjs';
+import type { Guide } from '../content.config';
 
 const icons = import.meta.glob<ImageMetadata>('../../../assets/icons/*/*.png', { eager: true, import: 'default' });
 const extraFiles = import.meta.glob<string>('../../../*.html', { eager: true, query: '?raw', import: 'default' });
@@ -25,8 +26,14 @@ export interface Extra {
 
 const fileName = (path: string) => path.slice(path.lastIndexOf('/') + 1);
 
-/** First `# heading` of a note, without inline images. */
+/** Frontmatter of a class guide, or undefined for a plain note. */
+export const guideOf = (doc: CollectionEntry<'notes'>): Guide | undefined =>
+	'class' in doc.data ? (doc.data as Guide) : undefined;
+
+/** Class guides: `<spec> <class>` from frontmatter. Other notes: first `# heading`, without inline images. */
 export const docTitle = (doc: CollectionEntry<'notes'>) => {
+	const guide = guideOf(doc);
+	if (guide) return `${guide.spec} ${guide.class}`;
 	const h1 = doc.body?.match(/^# (.+)$/m)?.[1] ?? doc.id;
 	return h1.replace(/!\[[^\]]*\]\([^)]*\)\s*/g, '').trim();
 };
@@ -49,7 +56,15 @@ export async function getLibrary(): Promise<LibrarySection[]> {
 			const doc = docs.get(slug);
 			if (!doc) return [];
 			listed.add(slug);
-			return [{ href: noteHref(slug), label, title: docTitle(doc), icon: iconFor(icon) }];
+			const guide = guideOf(doc);
+			return [
+				{
+					href: noteHref(slug),
+					label: label ?? docTitle(doc),
+					title: guide ? `${guide.role} · ${guide.content}` : docTitle(doc),
+					icon: iconFor(icon ?? guide?.icon),
+				},
+			];
 		}),
 	}));
 

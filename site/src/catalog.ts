@@ -4,8 +4,9 @@
  */
 export interface CatalogEntry {
 	slug: string;
-	label: string;
-	/** Path under assets/icons/, e.g. `holyknight/holy-aura.png`. */
+	/** Card label; class guides default to `<spec> <class>` from their frontmatter. */
+	label?: string;
+	/** Path under assets/icons/, e.g. `holyknight/holy-aura.png`; class guides default to their frontmatter `icon`. */
 	icon?: string;
 }
 
@@ -38,16 +39,16 @@ export const sections: Section[] = [
 		blurb: 'Skill codes, engravings, Ark Passive and rotations.',
 		grade: 'relic',
 		entries: [
-			{ slug: 'paladin', label: 'Support Paladin', icon: 'holyknight/holy-aura.png' },
-			{ slug: 'paladin-solo', label: 'Judgment Paladin (solo)', icon: 'holyknight/sacred-executioner.png' },
-			{ slug: 'dimensionalist', label: 'Time Wielder Dimensionalist', icon: 'dimensionalist/forewarning.png' },
-			{ slug: 'berserker', label: "Berserker's Technique", icon: 'berserker/power-break.png' },
-			{ slug: 'shadowhunter', label: 'Demonic Impulse Shadowhunter', icon: 'demonic/demonic-clone.png' },
-			{ slug: 'striker', label: 'Deathblow Striker', icon: 'battlemastermale/call-of-the-wind-god.png' },
-			{ slug: 'scouter', label: 'Evolutionary Legacy Machinist', icon: 'scouter/point-exclusion.png' },
-			{ slug: 'slayer', label: 'Predator Slayer', icon: 'berserkerfemale/guillotine.png' },
-			{ slug: 'wardancer', label: 'First Intention Wardancer', icon: 'battlemaster/sweeping-kick.png' },
-			{ slug: 'gk', label: 'Guardian Knight', icon: 'guardianknight/quake-smash.png' },
+			{ slug: 'paladin' },
+			{ slug: 'paladin-solo' },
+			{ slug: 'dimensionalist' },
+			{ slug: 'berserker' },
+			{ slug: 'shadowhunter' },
+			{ slug: 'striker' },
+			{ slug: 'scouter' },
+			{ slug: 'slayer' },
+			{ slug: 'wardancer' },
+			{ slug: 'gk' },
 		],
 	},
 	{

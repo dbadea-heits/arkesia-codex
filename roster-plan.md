@@ -195,7 +195,7 @@ Rules (Order before Chaos, rarity caps, Ancient vs Relic): `guides.md` → Ark G
 
 | Slot | Target (Relic, 17p) | Have now: core / rarity / points |
 |---|---|---|
-| Order Sun | True Justice (Divine Justice pair; in pugs Heavenly Agent can be better, see `paladin.md` → Sun / Moon pair by buff uptime) | ___ |
+| Order Sun | True Justice (Divine Justice pair; in pugs Heavenly Agent can be better, see `paladin.md` → Ark Grid, Sun / Moon pair by buff uptime) | ___ |
 | Order Moon | Divine Cause (pairs with the Sun: Heavenly Resolve if you go Heavenly Agent) | ___ |
 | Order Star | Sword's Prayer (changes playstyle: 2 Holy Sword charges at 17p) | ___ |
 | Chaos Sun | Faith Enhancement | ___ |
@@ -218,11 +218,11 @@ Rules (Order before Chaos, rarity caps, Ancient vs Relic): `guides.md` → Ark G
 | Chaos ×3 | none | DPS, shared by all specs: Flashy Attack (Sun) / Smoldering Strike (Moon) / Attack (Star) | ___ |
 
 1. [x] **No Chaos core before 1720.**
-2. [ ] **Until Sun 17p + Moon 14p + Star 10p are all in (the minimum Inven says runs 222), play the Time 111 code** (`dimensionalist.md`, Step 1). 111 runs without core effects. Put no gems in Multislash or Precise Control and register them for Core Essence. Dimensional Annihilation: 10p only while gems are spare.
+2. [ ] **Until Sun 17p + Moon 14p + Star 10p are all in (the minimum Inven says runs 222), play the Time 111 code** (`dimensionalist.md` → Play this now). 111 runs without core effects. Put no gems in Multislash or Precise Control and register them for Core Essence. Dimensional Annihilation: 10p only while gems are spare.
 3. [ ] Now: **core essence pity box Relic selector → Sun, Twisted Timeline** (the mandatory core). Ark Pass astrogem → Order / DPS → auto-equip → 17p.
 4. [ ] At 1710: if a Timeline or Distortion drops (Act 4 / Final Day), equip it: Moon 14p and Star 10p are enough.
 5. [ ] **1715 (optional honing):** Rapid Growth Relic Order selector → **Moon, Timeline** (if one hasn't dropped) → 17p. Star: take any Distortion that drops.
-6. [ ] Once all three are in: **switch to the Time 222 Dial Acceleration code** in `dimensionalist.md` (Step 2). Move the gems from the old cores.
+6. [ ] Once all three are in: **switch to the Time 222 Dial Acceleration code** in `dimensionalist.md` → Other builds. Move the gems from the old cores.
 7. [ ] **1720 (optional honing):** Rapid Growth Relic **Chaos** selector → one Chaos core at 17p. No source ranks the DPS Chaos cores; pick: ___
 
 ### Alts (1640 → 1710)

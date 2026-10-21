@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import type { Guide } from '../content.config';
+import { iconFor } from '../lib/library';
+import { noteHref } from '../lib/routes.mjs';
+import { tierFor } from '../lib/tiers';
+
+interface Props {
+	guide: Guide;
+}
+
+const { guide } = Astro.props;
+const icon = iconFor(guide.icon);
+const tier = tierFor(guide.class, guide.spec);
+const ANGLE = { none: 'Any angle', back: 'Back attack', head: 'Head attack' } as const;
+---
+
+<header class="guide-head">
+	<div class="guide-emblem" aria-hidden="true">
+		{icon && <Image src={icon} alt="" width={72} height={72} />}
+	</div>
+	<div class="guide-id">
+		<p class="guide-eyebrow">{guide.class} · {guide.role}</p>
+		<h1>{guide.spec}</h1>
+		<p class="guide-kr" lang="ko">{guide.specKr}</p>
+		<ul class="guide-facts">
+			<li><span>For</span>{guide.content}</li>
+			<li><span>Angle</span>{ANGLE[guide.angle]}</li>
+			<li><span>Codes checked</span>{guide.updated.toISOString().slice(0, 10)}</li>
+		</ul>
+	</div>
+	{
+		tier && (
+			<a class="guide-tiers" href={noteHref('tierlist')} title="Inven tier lists (tierlist.md)">
+				<span class="guide-avg">
+					<strong>{tier.avg.toFixed(1)}</strong>
+					<span>tier avg</span>
+				</span>
+				<span class="guide-ratings">
+					{tier.ratings.map(({ list, tier }) => (
+						<span>
+							<span class={/^[SABC]/.test(tier) ? `tier tier-${tier[0].toLowerCase()}` : 'tier tier-none'}>{tier}</span>
+							<small>{list}</small>
+						</span>
+					))}
+				</span>
+			</a>
+		)
+	}
+</header>

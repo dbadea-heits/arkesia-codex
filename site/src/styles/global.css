@@ -694,6 +694,7 @@ a:hover {
 .tier-a { --tier: var(--legendary); }
 .tier-b { --tier: var(--epic); }
 .tier-c { --tier: var(--muted); }
+.tier-none { --tier: var(--line); }
 
 .tier {
 	display: inline-block;
@@ -754,4 +755,232 @@ a:hover {
 
 @media (max-width: 600px) {
 	.bar-row { grid-template-columns: 7rem 1fr 2.2rem; font-size: 0.75rem; }
+}
+
+/* ---------- Class guides (frontmatter header + template sections) ---------- */
+
+.guide-head {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 1.5rem 1.75rem;
+	margin: calc(-1 * clamp(1.25rem, 4vw, 2.75rem)) calc(-1 * clamp(1.25rem, 4vw, 2.75rem)) 2rem;
+	padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 4vw, 2.75rem);
+	border-bottom: 1px solid transparent;
+	border-image: linear-gradient(90deg, transparent, var(--gold-dim), transparent) 1;
+	background:
+		radial-gradient(ellipse 45% 120% at 0% 50%, rgb(226 196 141 / 0.13), transparent 70%),
+		radial-gradient(ellipse 40% 140% at 100% 0%, color-mix(in srgb, var(--relic) 10%, transparent), transparent 70%),
+		linear-gradient(180deg, rgb(0 0 0 / 0.25), transparent);
+}
+
+/* Skill icon set in a rotated gold diamond, like an item slot */
+.guide-emblem {
+	position: relative;
+	width: 92px;
+	aspect-ratio: 1;
+	display: grid;
+	place-items: center;
+}
+
+.guide-emblem::before {
+	content: '';
+	position: absolute;
+	inset: 6px;
+	transform: rotate(45deg);
+	border: 1px solid var(--gold-deep);
+	background: radial-gradient(circle, rgb(226 196 141 / 0.18), rgb(0 0 0 / 0.6) 70%);
+	box-shadow: 0 0 28px rgb(226 196 141 / 0.25), inset 0 0 0 4px rgb(10 12 17 / 0.9), inset 0 0 0 5px var(--gold-dim);
+}
+
+.guide-emblem img {
+	position: relative;
+	width: 58px;
+	height: 58px;
+	margin: 0;
+	border: 1px solid var(--gold-dim);
+	border-radius: 6px;
+}
+
+.guide-id {
+	min-width: 0;
+}
+
+.guide-eyebrow {
+	margin: 0;
+	font: 600 0.75rem var(--display);
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--gold-dim);
+}
+
+.prose .guide-head h1 {
+	margin: 0.15rem 0 0;
+	padding: 0;
+	border: 0;
+	font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+	line-height: 1.05;
+	letter-spacing: 0.04em;
+}
+
+.guide-kr {
+	margin: 0.35rem 0 0;
+	color: var(--muted);
+	font-size: 0.95rem;
+}
+
+.guide-facts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0.85rem;
+}
+
+.prose .guide-facts li {
+	margin: 0;
+	padding: 0.3rem 0.7rem;
+	border: 1px solid var(--line);
+	border-radius: 3px;
+	background: rgb(0 0 0 / 0.25);
+}
+
+.guide-facts span {
+	margin-right: 0.45rem;
+	font: 600 0.68rem var(--display);
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--gold-dim);
+}
+
+.guide-tiers {
+	display: grid;
+	justify-items: center;
+	gap: 0.6rem;
+	padding: 0.9rem 1.1rem;
+	border: 1px solid var(--line);
+	border-radius: 4px;
+	background: rgb(0 0 0 / 0.3);
+	text-decoration: none;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.guide-tiers:hover {
+	border-color: var(--gold-dim);
+	box-shadow: 0 0 18px -6px rgb(226 196 141 / 0.4);
+}
+
+.guide-avg {
+	display: grid;
+	justify-items: center;
+	line-height: 1;
+}
+
+.guide-avg strong {
+	font: 700 2.2rem var(--display);
+	color: var(--gold);
+	text-shadow: 0 0 18px rgb(226 196 141 / 0.35);
+}
+
+.guide-avg span {
+	margin-top: 0.3rem;
+	font: 600 0.62rem var(--display);
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+.guide-ratings {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.guide-ratings > span {
+	display: grid;
+	justify-items: center;
+	gap: 0.2rem;
+}
+
+.guide-ratings small {
+	font-size: 0.62rem;
+	color: var(--muted);
+	white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+	.guide-head {
+		grid-template-columns: auto minmax(0, 1fr);
+	}
+
+	.guide-tiers {
+		grid-column: 1 / -1;
+		grid-auto-flow: column;
+		justify-content: center;
+		gap: 1.25rem;
+	}
+}
+
+/* Template sections, wrapped per `##` heading by pages/notes/[slug].astro */
+.sec {
+	margin-top: 2.5rem;
+}
+
+.sec > h2:first-child {
+	margin-top: 0;
+}
+
+/* "Play this now": the one code to import, set apart like a sealed order */
+.sec-play-this-now {
+	position: relative;
+	padding: 1.4rem clamp(1rem, 3vw, 1.75rem) 0.6rem;
+	border: 1px solid var(--gold-deep);
+	border-radius: 4px;
+	background:
+		radial-gradient(ellipse 70% 90% at 50% 0%, rgb(226 196 141 / 0.1), transparent 70%),
+		rgb(0 0 0 / 0.25);
+	box-shadow: 0 0 0 4px rgb(10 12 17 / 0.9), 0 0 0 5px var(--gold-dim), 0 18px 40px -18px rgb(226 196 141 / 0.35);
+}
+
+.sec-play-this-now > h2 {
+	color: #fff2d6;
+}
+
+.sec-play-this-now .code-block.skill-code {
+	border-color: var(--gold);
+	box-shadow: 0 0 26px -6px rgb(226 196 141 / 0.55);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.sec-play-this-now .code-block.skill-code {
+		animation: seal-glow 2.4s ease-out 0.3s both;
+	}
+}
+
+@keyframes seal-glow {
+	from { box-shadow: 0 0 0 0 rgb(226 196 141 / 0.8); }
+	40% { box-shadow: 0 0 40px 4px rgb(226 196 141 / 0.45); }
+}
+
+.sec-caveats {
+	padding-left: 1rem;
+	border-left: 3px solid var(--legendary);
+}
+
+/* Paradise is its own mode: epic purple instead of gold */
+.sec-paradise-crucible {
+	padding-top: 1.75rem;
+	border-top: 1px solid transparent;
+	border-image: linear-gradient(90deg, transparent, var(--epic), transparent) 1;
+}
+
+.sec-paradise-crucible h2,
+.sec-paradise-crucible h3 {
+	color: color-mix(in srgb, var(--epic) 55%, #fff);
+}
+
+.sec-paradise-crucible > h2::before {
+	background: var(--epic);
+	box-shadow: 0 0 8px var(--epic);
 }

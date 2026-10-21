@@ -47,10 +47,10 @@ Consensus of three community tier lists from Inven's tier-ranking board, collect
 | Sorceress | Igniter | B | A+ | A | 6.3 |
 | Breaker | Asura's Path | A | A | B | 6.0 |
 | Reaper | Hunger | A | A | B | 6.0 |
-| Guardian Knight | 업화의 계승자 | B | A | A | 6.0 |
+| Guardian Knight | Hellfire Successor | B | A | A | 6.0 |
 | Gunlancer | Combat Readiness | Utility* | C | S | 6.0 |
 | Gunslinger | Time to Hunt | A | A- | B | 5.7 |
-| Guardian Knight | 드레드 로어 | A | A- | B | 5.7 |
+| Guardian Knight | Dread Roar | A | A- | B | 5.7 |
 | Scrapper | Shock Training | B | A | — | 5.5 |
 | Berserker | Mayhem | B | A | — | 5.5 |
 | Shadowhunter | Perfect Suppression | B | A | — | 5.5 |
@@ -80,5 +80,4 @@ Consensus of three community tier lists from Inven's tier-ranking board, collect
 ## Not in the table
 
 - **Supports** (Bard, Artist, Paladin – Blessed Aura, Valkyrie – Liberator) aren't ranked on any of the three lists; all three put them in one group.
-- **Guardian Knight** engravings are listed by their Korean names (업화의 계승자, 드레드 로어, from [loagg.com](https://loagg.com/stats)); their English names aren't confirmed.
 - **Extreme Mordum entries not matched to a class:** 망소빙 (S), 전탄 (S), 무상 (A).

@@ -1,8 +1,9 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import { getCollection, render } from 'astro:content';
+import GuideHeader from '../../components/GuideHeader.astro';
 import Base from '../../layouts/Base.astro';
-import { docTitle } from '../../lib/library';
+import { docTitle, guideOf } from '../../lib/library';
 import { homeHref } from '../../lib/routes.mjs';
 
 export const getStaticPaths = (async () =>
@@ -12,6 +13,7 @@ const { doc } = Astro.props;
 const { Content, headings } = await render(doc);
 const toc = headings.filter((h) => h.depth <= 2);
 const file = doc.filePath?.split('/').pop();
+const guide = guideOf(doc);
 ---
 
 <Base title={docTitle(doc)}>
@@ -31,7 +33,8 @@ const file = doc.filePath?.split('/').pop();
 				</ol>
 			</details>
 		</aside>
-		<article class="prose frame" data-file={file}>
+		<article class:list={['prose frame', { 'class-guide': guide }]} data-file={file}>
+			{guide && <GuideHeader guide={guide} />}
 			<Content />
 		</article>
 	</div>
@@ -40,6 +43,20 @@ const file = doc.filePath?.split('/').pop();
 <script>
 	// On narrow screens the contents list sits above the article; start it collapsed.
 	if (matchMedia('(max-width: 900px)').matches) document.querySelector<HTMLDetailsElement>('#toc')!.open = false;
+
+	// Class guides: wrap each `##` heading and what follows it in a <section class="sec sec-<heading id>">
+	// so the template's sections (Play this now, Paradise Crucible, …) can be styled as panels.
+	for (const h2 of document.querySelectorAll<HTMLHeadingElement>('.class-guide > h2')) {
+		const section = document.createElement('section');
+		section.className = `sec sec-${h2.id}`;
+		h2.before(section);
+		let node: ChildNode | null = h2;
+		while (node && !(node instanceof HTMLHeadingElement && node.tagName === 'H2' && node !== h2)) {
+			const next: ChildNode | null = node.nextSibling;
+			section.append(node);
+			node = next;
+		}
+	}
 
 	// Wrap every code block in a titled frame with a copy button; 128-hex blocks are skill-tree codes.
 	const SKILL_CODE = /^[0-9A-F]{128}$/i;

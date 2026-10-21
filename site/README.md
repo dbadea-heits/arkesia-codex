@@ -12,7 +12,13 @@ npm run preview  # serve dist/
 ```
 
 - Grouping, card labels and card icons: `src/catalog.ts`. A new note that is not listed there still
-  gets a page and shows up under "More notes".
+  gets a page and shows up under "More notes". Class guides take their card label and icon from
+  their frontmatter.
+- Class guides follow `../.omp/skills/lost-ark-skill-codes/GUIDE-TEMPLATE.md`. Their frontmatter
+  (schema in `src/content.config.ts`) renders as the page header (`src/components/GuideHeader.astro`),
+  with tier badges looked up in `../tierlist.md` by class + spec (`src/lib/tiers.ts`). Each `##`
+  section is wrapped in `<section class="sec sec-<heading id>">`, which styles **Play this now** and
+  **Paradise Crucible**.
 - Links such as `[x](guides.md)` or `` `guides.md` `` inside notes are rewritten to site routes by
   `src/lib/doc-links-plugin.mjs`.
 - 128-character code blocks are shown as skill codes with a copy button.
