@@ -12,11 +12,11 @@ Update this after every honing session.
 | Character | Start | Target | Current ilvl | Phase | Notes |
 |---|---|---|---|---|---|
 | **Paladin (main)** | 1717 | 1730 by Week 3 (Oct 21–27), then 1750 via T4.5 (Belgardin, Horizon Cathedral Stage 3) | 1720.0 (pieces table; Week 1 log said 1720.8) | Push to 1730 | gets all alt roster-bound gold until 1730, then funds 1750 from its own raid gold; Act 4 Hard on support from Week 2; Base Camp character (Ark Grid path) |
-| Dimensionalist | 1700 | 1710 (1715 / 1720 only if gold reaches before 2026-12-16) | 1704.5 (pieces table; Week 1 log said 1704.66) | To 1710: own gold, then alt queue #2 (after the alts' 1660) once the Paladin is 1730 | Jump-Up Boost rewards already claimed; Rapid Growth character (Ark Grid path) |
-| Berserker (Mayhem) | 1640 | 1660 → 1670 → 1680 → 1710 | 1648.00 | Feeder until Paladin 1730, then alt queue | |
-| Striker | 1640 | 1660 → 1670 → 1680 → 1710 | 1645.50 | Feeder (flex), then alt queue (last) | skipped on 3-play-day weeks |
+| Dimensionalist (Time Wielder) | 1700 | 1710 (1715 / 1720 only if gold reaches before 2026-12-16) | 1704.5 (pieces table; Week 1 log said 1704.66) | To 1710: own gold, then alt queue #2 (after the alts' 1660) once the Paladin is 1730 | Jump-Up Boost rewards already claimed; Rapid Growth character (Ark Grid path) |
+| Berserker (Technique) | 1640 | 1660 → 1670 → 1680 → 1710 | 1648.00 | Feeder until Paladin 1730, then alt queue | |
+| Striker (Deathblow) | 1640 | 1660 → 1670 → 1680 → 1710 | 1645.50 | Feeder (flex), then alt queue (last) | skipped on 3-play-day weeks |
 | Shadowhunter (DI) | 1640 | 1660 → 1670 → 1680 → 1710 | 1649.66 | Feeder, then alt queue | |
-| Machinist (AT) | 1640 | 1660 → 1670 → 1680 → 1710 | 1646.66 | Feeder, then alt queue | |
+| Machinist (EL) | 1640 | 1660 → 1670 → 1680 → 1710 | 1646.66 | Feeder, then alt queue | |
 
 ## Milestones
 
@@ -208,21 +208,21 @@ Rules (Order before Chaos, rarity caps, Ancient vs Relic): `guides.md` → Ark G
 4. [x] Order point priority when gems are short: **Star 17p → Moon 14p** (turns on Destiny, so the Sun's 14p works) **→ Moon / Sun 17p**.
 5. [x] Chaos 14p → 17p as Relic Chaos cores drop (Act 4 / Final Day), in this order: Moon Echoing Brand → Sun Faith Enhancement → Star Weapon. Goal: 3×17p by 1730.
 
-### Dimensionalist (Space Wielder): Rapid Growth path
+### Dimensionalist (Time Wielder): Rapid Growth path
 
-| Slot | Now (`space.md`) | 222 target (Maxroll global name) | Rarity / points now |
+| Slot | Now (`dimensionalist.md`) | 222 target (Maxroll global name) | Rarity / points now |
 |---|---|---|---|
-| Order Sun | Dimensional Annihilation (Time, does nothing on Space) | **Master Impaler** (찌르기의 대가): with Destiny, Forward Thrust / Retaliate stack Dimensional Vacuum (up to 3) → Vacuum damage | ___ |
-| Order Moon | Precise Control (333) | **Point Attack** (포인트 어택): Interference grants Destiny; Retaliate / Vacuum cut Forward Thrust's cooldown by 10s (reset) | ___ |
-| Order Star | Multislash (333) | **Chain Thrust** (찌르기 연계): Forward Thrust / Retaliate / Vacuum damage. Lowest priority; keep Multislash until it drops | ___ |
-| Chaos ×3 | none | DPS: Flashy Attack (Sun) / Smoldering Strike (Moon) / Attack (Star) | ___ |
+| Order Sun | Dimensional Annihilation (Time 333 core: +1.5% at 10p, nobody plays 333) | **Twisted Timeline** (왜곡된 시간선): **Relic 17p is mandatory**; Destiny cuts Dimensional Break's cooldown by 5s, each Fusion skill cuts Cross Thrust's by 10s | ___ |
+| Order Moon | Precise Control (Space core, does nothing on Time) | **Timeline** (타임 라인): Destiny on Cross Thrust, more Dimensional Break damage. 14p is enough | ___ |
+| Order Star | Multislash (Space core, does nothing on Time) | **Distortion** (비틀림): Cross Thrust damage and cast speed. 10p is enough; lowest priority | ___ |
+| Chaos ×3 | none | DPS, shared by all specs: Flashy Attack (Sun) / Smoldering Strike (Moon) / Attack (Star) | ___ |
 
 1. [x] **No Chaos core before 1720.**
-2. [ ] **Until Point Attack and Master Impaler are both Relic 17p, play the 111 code** (`space.md`, "Your cores" verdict). Keep Multislash at 14p. Precise Control only adds +1.6% at 10p, so step 3 can replace it without a real loss. Put no gems in Dimensional Annihilation.
-3. [ ] Now: **core essence pity box Relic selector → Moon, Point Attack** (the Moon is the one that makes 222 run). Ark Pass astrogem → Order / DPS → auto-equip → 17p.
-4. [ ] At 1710: if a Relic **Master Impaler** drops, equip it and fill to 17p.
-5. [ ] **1715 (optional honing):** Rapid Growth Relic Order selector → **Sun, Master Impaler** (if one hasn't dropped) → 17p. **Switch to the 222 Supersonic Breakthrough code** in `space.md` (the solo pick, "Solo Mode at 1700 with 222 cores"). Move the gems from Precise Control to the new cores.
-6. [ ] Star: swap Multislash for **Chain Thrust** when a Relic one drops. That brings Order to 3×17p.
+2. [ ] **Until Sun 17p + Moon 14p + Star 10p are all in (the minimum Inven says runs 222), play the Time 111 code** (`dimensionalist.md`, Step 1). 111 runs without core effects. Put no gems in Multislash or Precise Control and register them for Core Essence. Dimensional Annihilation: 10p only while gems are spare.
+3. [ ] Now: **core essence pity box Relic selector → Sun, Twisted Timeline** (the mandatory core). Ark Pass astrogem → Order / DPS → auto-equip → 17p.
+4. [ ] At 1710: if a Timeline or Distortion drops (Act 4 / Final Day), equip it: Moon 14p and Star 10p are enough.
+5. [ ] **1715 (optional honing):** Rapid Growth Relic Order selector → **Moon, Timeline** (if one hasn't dropped) → 17p. Star: take any Distortion that drops.
+6. [ ] Once all three are in: **switch to the Time 222 Dial Acceleration code** in `dimensionalist.md` (Step 2). Move the gems from the old cores.
 7. [ ] **1720 (optional honing):** Rapid Growth Relic **Chaos** selector → one Chaos core at 17p. No source ranks the DPS Chaos cores; pick: ___
 
 ### Alts (1640 → 1710)

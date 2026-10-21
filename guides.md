@@ -149,9 +149,9 @@ Order cores only work for their own spec. Build the grid for support (Blessed Au
 
 ### Dimensionalist: why 222 needs new cores
 
-Rapid Growth character, **goal: 222**. It owns only the 3 cores in `space.md`, and none of them is a 222 core: Multislash and Precise Control are 333 cores, and Dimensional Annihilation is a Time core. 222 needs all-new cores, and **222 doesn't work on Legendary cores**: Sun and Moon must both be Relic at 17p, and Moon 17p is what makes the rotation run (`space.md`, Inven 3780). The Star core barely matters: 221 (no Star 2) did about the same damage as 222 (Inven 4508).
+Rapid Growth character, Time Wielder, **goal: Time 222**. It owns only the 3 cores in `dimensionalist.md`, and none of them is a 222 core: Multislash and Precise Control are Space cores that do nothing on Time, and Dimensional Annihilation is the Time 333 Sun core (+1.5% at 10p; nobody plays 333). So it plays Time 111 until the 222 cores are in, because 111's cores only add buffs. 222 needs **Twisted Timeline (Sun) at Relic 17p (mandatory), Timeline (Moon) at 14p and Distortion (Star) at 10p**, the minimum Inven says runs it (`dimensionalist.md`, Inven 3941 / 4089 / 378).
 
-Relic sources: the core essence pity box (now), the Rapid Growth 1715 Order selector, the Rapid Growth 1720 Chaos selector, and Act 4 / Final Day drops. This character **needs cores**, so bonus chests on Act 4 / Final Day are worth considering.
+Relic sources: the core essence pity box (now: spend it on the Sun, Twisted Timeline), the Rapid Growth 1715 Order selector (Moon, Timeline), the Rapid Growth 1720 Chaos selector, and Act 4 / Final Day drops (Distortion). This character **needs cores**, so bonus chests on Act 4 / Final Day are worth considering.
 
 ### Astrogems
 
@@ -190,7 +190,7 @@ Purple 8-cost gem; odds from my simulation using loseii's outcome table.
 ## Sources
 
 - Raid gold, Growth Boost shop, Jump-Up Boost / Rapid Growth, T3 → T4 exchange, Horn / Globe tempering for Adv 21–40: https://www.playlostark.com/en-us/game/releases/dimensions-unbound
-- Ark Grid steps, astrogem fusion and processing rules: https://www.reddit.com/r/lostarkgame/comments/1wyicds/how_to_manage_ark_grid_for_newreturning_players/ (2026-10-05); Paladin core targets: `paladin.md`; Dimensionalist cores: `space.md`
+- Ark Grid steps, astrogem fusion and processing rules: https://www.reddit.com/r/lostarkgame/comments/1wyicds/how_to_manage_ark_grid_for_newreturning_players/ (2026-10-05); Paladin core targets: `paladin.md`; Dimensionalist cores: `dimensionalist.md`
 - Solo Mode, Serca matchmaking, Mokoko Buff (combat buff, 90 days from 2026-07-15): https://www.playlostark.com/en-us/game/releases/summer-of-extremes
 - Raid gold splits, Horizon Cathedral, 1750 content (Stage 3, Abyssal Reversal 2, Haal's Hourglass Stage 2, Kurzan Front 1750): https://www.playlostark.com/en-us/game/releases/the-twilight-isle
 - Kurzan Front, Milestone Missions (replaced weekly Una's): https://www.playlostark.com/en-gb/game/releases/guardians-rage

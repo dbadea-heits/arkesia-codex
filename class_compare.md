@@ -2,7 +2,7 @@
 
 Original goal: pick 3 of Guardian Knight, Valkyrie, Wardancer, Slayer, Paladin, Berserker, Striker, Shadowhunter to run Solo Mode raids at 1640 and funnel gold to a main.
 
-Research date: 2026-09-30. Rewritten 2026-10-16 with the per-class build research (`GK.md`, `Shadowhunter.md`, `mayhem.md`, `compare-striker.md`, `slayer.md`, `scouter.md`, `paladin-solo.md`, `space.md`), the gold rules in `raid.md` / `guides.md`, and the roster in `roster-plan.md`.
+Research date: 2026-09-30. Rewritten 2026-10-16 with the per-class build research (`GK.md`, `Shadowhunter.md`, `berserker.md`, `striker.md`, `slayer.md`, `scouter.md`, `paladin-solo.md`, `dimensionalist.md`), the gold rules in `raid.md` / `guides.md`, and the roster in `roster-plan.md`. Specs updated 2026-10-21 to the higher-ranked engravings in `tierlist.md`.
 
 ## TL;DR
 
@@ -12,11 +12,11 @@ Research date: 2026-09-30. Rewritten 2026-10-16 with the per-class build researc
   | Character | Role | ilvl | Spec |
   |---|---|---|---|
   | Paladin | Main | 1720.0 | Blessed Aura (support) in party; Judgment (DPS) build for solo (`paladin-solo.md`) |
-  | Dimensionalist | 2nd | 1704.5 | Space Wielder (`space.md`) |
+  | Dimensionalist | 2nd | 1704.5 | Time Wielder (`dimensionalist.md`) |
   | Shadowhunter | 1640 alt | 1649.66 | Demonic Impulse |
-  | Berserker | 1640 alt | 1648.00 | Mayhem |
-  | Machinist | 1640 alt | 1646.66 | Arthetinean Skill |
-  | Striker | 1640 alt | 1645.50 | Esoteric Flurry / Deathblow |
+  | Berserker | 1640 alt | 1648.00 | Berserker's Technique |
+  | Machinist | 1640 alt | 1646.66 | Evolutionary Legacy |
+  | Striker | 1640 alt | 1645.50 | Deathblow |
 
 - **How that differs from the first pick** (Paladin / Guardian Knight / Shadowhunter): the Paladin became the main instead of a solo alt. Guardian Knight wasn't rolled. Berserker and Striker (the English-source picks) were kept, and Machinist was added from outside the candidate list.
 - **Solo ease among the four alts** ([inference] from each build's engravings, see the per-class table): Shadowhunter, Machinist and pre-grid Berserker don't need a specific attack angle. Striker relies on back attacks, which makes it the hardest solo alt. It's already last in the honing queue.
@@ -51,9 +51,9 @@ Sources: `raid.md` (official patch notes up to Dimensions Unbound, 2026-09-16), 
 ### Buffs and mechanics
 
 - Solo buffs are picked before the fight. **True Supporter** is a damage buff that only support classes get, **including supports running a DPS build**. That's why DPS Paladin and DPS Valkyrie overperform in solo.
-- **The solo back-attack buff gives the back-attack damage bonus from any angle, but it doesn't trigger Ambush Master.** This is one user's report on the Mayhem board (`mayhem.md` → Solo Mode notes). So Ambush Master builds still have to reach the boss's back.
+- **The solo back-attack buff gives the back-attack damage bonus from any angle, but it doesn't trigger Ambush Master.** This is one user's report on the Inven Berserker board. So Ambush Master builds still have to reach the boss's back.
 - Counters, stagger, weak points / destruction and positioning are all still in solo.
-- No support means no party attack-speed buff, no shields and no support mana. Swiftness-capped builds (Supersonic Breakthrough) and mana-hungry classes feel it (`mayhem.md`, `GK.md`).
+- No support means no party attack-speed buff, no shields and no support mana. Swiftness-capped builds (Supersonic Breakthrough) and mana-hungry classes feel it (`GK.md`).
 
 ## Per-class verdict (candidates + roster)
 
@@ -63,14 +63,14 @@ Sources: `raid.md` (official patch notes up to Dimensions Unbound, 2026-09-16), 
 |---|---|---|---|---|
 | Paladin (Judgment, DPS) | Main (support in party) | Doesn't depend on angle before Ark Grid. The 222 core makes it back-attack based, so don't rush 222 for solo | "King of solo", fastest by far; gets True Supporter | `paladin-solo.md`: Blunt Thorn code + Swiftness / Standing Striker code |
 | Shadowhunter (Demonic Impulse) | 1640 alt | Doesn't depend on angle (no Ambush Master: Grudge, Keen Blunt Weapon, Adrenaline, Raid Captain, Cursed Doll) | Recommended in 3 threads; hit immunity on transform / un-transform; transforming heals ~20% | `Shadowhunter.md`: Hiloa "112 = pre-grid" code; alt build "easiest before Ark Grid" |
-| Berserker (Mayhem) | 1640 alt | Pre-grid: doesn't depend on angle (Grudge, Keen Blunt Weapon, Master's Tenacity, Raid Captain, Cursed Doll). At 1700+ the 111 build needs Ambush Master, but the Sun1 core makes Dark Rush always count as a back attack | In a 6-alt solo roster, not top-ranked. The guide author calls the build "very easy to operate". Mana runs dry in solo | `mayhem.md`: Supersonic Breakthrough Mayhem (Jev pick 0.99) |
-| Machinist (Arthetinean Skill) | 1640 alt | Doesn't depend on angle (Grudge, Raid Captain, Mass Increase, Keen Blunt Weapon, Adrenaline); Strategic Fire and Avalanche are push-immune | Inven rates the **Evolutionary Legacy** spec highly for solo; Arthetinean Skill wasn't discussed. Battery needs food | `scouter.md`: 431 tree (Jev 0.67) |
-| Striker (Esoteric Flurry / Deathblow) | 1640 alt, last in queue | **Back attack**: Ambush Master in both 1640 builds. Deathblow 333 "requires" back attacks; Flurry 222 is less dependent | Not mentioned in the solo threads. Class board: pre-grid Flurry is slightly stronger and more forgiving at 1640. Deathblow needs Orb's Blessing (80 Enlightenment) | `compare-striker.md`: Flurry and Deathblow codes, plus the 3-Esoteric fallback |
+| Berserker (Berserker's Technique) | 1640 alt | Doesn't depend on angle (Grudge, Keen Blunt Weapon, Raid Captain, Cursed Doll, Mass Increase; no Ambush Master) | Tier lists A / A / A. One Dec 2025 Inven post finds the Technique rotation hard before cores | `berserker.md`: pre-grid Finish build with Standing Striker (Jev 0.87); 111 Shoulder Charge code for 1700+ |
+| Machinist (Evolutionary Legacy) | 1640 alt | Doesn't depend on angle per the sources (Grudge, Keen Blunt Weapon, Raid Captain, Adrenaline, Mass Increase) | Inven rates Evolutionary Legacy highly for solo. Must be transformed: awakening potion before the pull | `scouter.md`: pre-grid code (Jev 1.00); 333 code for 1700+ |
+| Striker (Deathblow) | 1640 alt, last in queue | **Back attack**: Ambush Master; the 333 grid build requires back attacks | Not mentioned in the solo threads. Needs Orb's Blessing (80 Enlightenment); without it, the 3-Esoteric tree | `striker.md`: 111 호령 Deathblow code, 3-Esoteric fallback, 333 code for 1700+ |
 | Guardian Knight (Dread Roar / Hellfire Successor) | No | Dread Roar: **head attack** (Master Brawler); head attacks are easy in solo because the boss faces you | 6-alt solo player ranks it #2, "very strong" | `GK.md`: Dread Roar 333 instant-cast (Jev 0.51), Hellfire "Quake" (0.32). No solo / no-grid code since KR's 2026-04-22 patch; loagg has the two specs tied (796 vs 785) |
 | Slayer (Predator) | No | **Back attack** (Ambush Master; "land back attacks as skills come off cooldown") | In a 6-alt solo roster, not top-ranked | `slayer.md`: pre-grid Predator code a player used at 1640 (Jev 0.67) |
 | Valkyrie (DPS) | No | Not researched | "Easy and comfortable"; gets True Supporter. One newbie kept missing her big-hit skills | none |
 | Wardancer (First Intention) | No | Doesn't depend on angle in the pre-grid code (Grudge, Keen Blunt Weapon, Mass Increase, Raid Captain, Adrenaline) | Not mentioned for solo; named as a Swiftness example ("you handle every destruction / stagger / counter yourself") | `wardancer.md`: pre-grid Supersonic Breakthrough raid code (Jev 0.77; no Solo Mode code exists) |
-| Dimensionalist (Space Wielder; not a candidate) | 2nd character | **Directional**: hits only count on the rift side. Time Wielder doesn't depend on angle | Board: Space is hard in solo because of back attacks; players lean toward Time for solo | `space.md`: 111 no-Adrenaline code until the 222 cores are Relic 17p |
+| Dimensionalist (Time Wielder; not a candidate) | 2nd character | Doesn't depend on angle (no rift side) | Board: Space is hard in solo because of back attacks; players lean toward Time for solo | `dimensionalist.md`: Time 111 code now, 222 code once Twisted Timeline is Relic 17p |
 
 All codes are KR. They import correctly on global only if global has the matching KR balance patch, which is unverified for every class above.
 
