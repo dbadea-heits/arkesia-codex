@@ -54,11 +54,12 @@ export const sections: Section[] = [
 	{
 		id: 'content',
 		title: 'Content guides',
-		blurb: 'Paradise keys and raid walkthroughs.',
+		blurb: 'Paradise keys, raid walkthroughs and game settings.',
 		grade: 'legendary',
 		entries: [
 			{ slug: 'paradise', label: 'Paradise Hell Keys' },
 			{ slug: 'thaemine', label: 'Thaemine solo' },
+			{ slug: 'effect-settings', label: 'Effect settings' },
 		],
 	},
 ];
