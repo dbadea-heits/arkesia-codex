@@ -29,6 +29,7 @@ export const sections: Section[] = [
 			{ slug: 'guides', label: 'Gold, honing & Ark Grid' },
 			{ slug: 'raid', label: 'Solo gold by item level' },
 			{ slug: 'class-compare', label: 'Solo alt class comparison' },
+			{ slug: 'tierlist', label: 'Inven class tier list' },
 		],
 	},
 	{

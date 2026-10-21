@@ -16,6 +16,8 @@ npm run preview  # serve dist/
 - Links such as `[x](guides.md)` or `` `guides.md` `` inside notes are rewritten to site routes by
   `src/lib/doc-links-plugin.mjs`.
 - 128-character code blocks are shown as skill codes with a copy button.
+- Tables with an `Avg` header column are tier tables: cells such as `S`, `A+`, `C-` become coloured
+  badges and a bar chart of the `Avg` column (labelled by the first two columns) is drawn above.
 - Task checkboxes (`- [ ]`) are clickable under `npm run dev`: ticking one writes `[x]` / `[ ]` back
   to that line of the Markdown file (`src/lib/task-toggle-server.mjs`). The static build has no
   server, so there they stay read-only.

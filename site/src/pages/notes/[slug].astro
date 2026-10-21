@@ -75,6 +75,42 @@ const file = doc.filePath?.split('/').pop();
 		pre.replaceWith(block);
 		block.append(bar, pre);
 	}
+
+	// Tier tables (a header cell named "Avg"): tier cells become coloured badges and a bar chart of
+	// the Avg column, labelled by the first two columns, is drawn above the table.
+	const TIER = /^(S|A|B|C)([+-]?)$/;
+	const AVG_MAX = 10;
+
+	for (const table of document.querySelectorAll<HTMLTableElement>('.prose table')) {
+		const headers = [...table.querySelectorAll('thead th')].map((th) => th.textContent!.trim());
+		const avgCol = headers.indexOf('Avg');
+		if (avgCol < 0) continue;
+
+		const chart = document.createElement('figure');
+		chart.className = 'bar-chart';
+
+		for (const row of table.querySelectorAll<HTMLTableRowElement>('tbody tr')) {
+			const cells = [...row.cells];
+			for (const cell of cells) {
+				const tier = TIER.exec(cell.textContent!.trim());
+				if (!tier) continue;
+				const badge = document.createElement('span');
+				badge.className = `tier tier-${tier[1].toLowerCase()}`;
+				badge.textContent = tier[0];
+				cell.replaceChildren(badge);
+			}
+
+			const avg = Number(cells[avgCol].textContent);
+			const band = avg >= 8.5 ? 's' : avg >= 6 ? 'a' : avg >= 4 ? 'b' : 'c';
+			const bar = document.createElement('div');
+			bar.className = `bar-row tier-${band}`;
+			bar.innerHTML = `<span class="bar-label"></span><span class="bar-track"><span class="bar-fill" style="width:${(avg / AVG_MAX) * 100}%"></span></span><span class="bar-value">${avg.toFixed(1)}</span>`;
+			bar.querySelector('.bar-label')!.textContent = `${cells[0].textContent} · ${cells[1].textContent}`;
+			chart.append(bar);
+		}
+
+		table.before(chart);
+	}
 </script>
 
 <script>
