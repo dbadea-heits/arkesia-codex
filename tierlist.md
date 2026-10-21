@@ -19,6 +19,7 @@ Consensus of three community tier lists from Inven's tier-ranking board, collect
 | Class | Engraving | Oct 20 | Oct 18 | Ext. Mordum | Avg |
 |---|---|---|---|---|---|
 | Arcana | Emperor | S | S | S | 10.0 |
+| Dimensionalist | Time Wielder† | — | — | S | 10.0 |
 | Deathblade | Remaining Energy | S | A+ | S | 9.3 |
 | Reaper | Lunar Voice | S- | S- | S | 9.3 |
 | Souleater | Full Moon | S- | S- | — | 9.0 |
@@ -38,6 +39,7 @@ Consensus of three community tier lists from Inven's tier-ranking board, collect
 | Glaivier | Pinnacle | A | A | — | 7.0 |
 | Berserker | Technique | A | A | A | 7.0 |
 | Summoner | Master Summoner | A | A | A | 7.0 |
+| Dimensionalist | Space Wielder† | — | — | A | 7.0 |
 | Destroyer | Rage Hammer | A | A- | — | 6.5 |
 | Sorceress | Reflux | A | A- | — | 6.5 |
 | Slayer | Punisher | A | A- | — | 6.5 |
@@ -45,10 +47,10 @@ Consensus of three community tier lists from Inven's tier-ranking board, collect
 | Sorceress | Igniter | B | A+ | A | 6.3 |
 | Breaker | Asura's Path | A | A | B | 6.0 |
 | Reaper | Hunger | A | A | B | 6.0 |
-| Guardian Knight | 업화 | B | A | A | 6.0 |
+| Guardian Knight | 업화의 계승자 | B | A | A | 6.0 |
 | Gunlancer | Combat Readiness | Utility* | C | S | 6.0 |
 | Gunslinger | Time to Hunt | A | A- | B | 5.7 |
-| Guardian Knight | 드레드 | A | A- | B | 5.7 |
+| Guardian Knight | 드레드 로어 | A | A- | B | 5.7 |
 | Scrapper | Shock Training | B | A | — | 5.5 |
 | Berserker | Mayhem | B | A | — | 5.5 |
 | Shadowhunter | Perfect Suppression | B | A | — | 5.5 |
@@ -73,8 +75,10 @@ Consensus of three community tier lists from Inven's tier-ranking board, collect
 
 \* The Oct 20 list puts Combat Readiness in the support/utility group instead of ranking it, because it's valued for stagger and counters rather than damage. Its Avg uses the other two lists only.
 
+† Dimensionalist is rated only on the Extreme Mordum list (Korean names 시간 관리자 / 공간 검사, matched via [loagg.com](https://loagg.com/stats)), so its Avg rests on a single rating.
+
 ## Not in the table
 
 - **Supports** (Bard, Artist, Paladin – Blessed Aura, Valkyrie – Liberator) aren't ranked on any of the three lists; all three put them in one group.
-- **Guardian Knight** engravings are left in Korean (업화, 드레드); their English names aren't confirmed.
-- **Extreme Mordum entries not matched to a class:** 시간 (S), 공간 (A), 망소빙 (S), 전탄 (S), 무상 (A). 시간 / 공간 mean "time / space" and are probably the Dimensionalist builds [inference].
+- **Guardian Knight** engravings are listed by their Korean names (업화의 계승자, 드레드 로어, from [loagg.com](https://loagg.com/stats)); their English names aren't confirmed.
+- **Extreme Mordum entries not matched to a class:** 망소빙 (S), 전탄 (S), 무상 (A).
