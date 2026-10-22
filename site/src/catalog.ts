@@ -58,6 +58,7 @@ export const sections: Section[] = [
 		grade: 'legendary',
 		entries: [
 			{ slug: 'paradise', label: 'Paradise Hell Keys' },
+			{ slug: 'paladin-honing', label: 'Paladin honing to 1750', icon: 'holyknight/heavenly-blessings.png' },
 			{ slug: 'thaemine', label: 'Thaemine solo' },
 			{ slug: 'effect-settings', label: 'Effect settings' },
 		],
