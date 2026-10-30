@@ -42,7 +42,7 @@ export const sections: Section[] = [
 			{ slug: 'paladin' },
 			{ slug: 'paladin-solo' },
 			{ slug: 'dimensionalist' },
-			{ slug: 'berserker' },
+            { slug: 'mayhem' },
 			{ slug: 'shadowhunter' },
 			{ slug: 'striker' },
             { slug: 'striker-esoteric' },
