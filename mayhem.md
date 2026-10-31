@@ -14,7 +14,7 @@ The code is a KR build imported to CE; whether it plays identically on global de
 
 ## Play this now
 
-Use the pre-grid Core 이전 build with a Crit/Swiftness split, Swiftness pet and a Crit/Swiftness bracelet. The author targets about 60% displayed town Crit.
+Use the pre-grid build with a Crit/Swiftness split, Swiftness pet and a Crit/Swiftness bracelet. The author targets about 60% displayed town Crit.
 
 ```
 33A6375A1358476BE4B12B8B0CC21892AD8AA98FBC2B45DDBAEAE080C9509B97093A97C936FCDD8AC0D1F5DB05EC73965B4AC72D112FC4F11CEA1324772EA392
